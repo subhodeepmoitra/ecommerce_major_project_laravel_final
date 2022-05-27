@@ -25,4 +25,16 @@ class HomeController extends Controller
     {
         return view('dashboard2');
     }
+    public function categories()
+    {
+        return view('categories');
+    }
+    public function manage_categories()
+    {
+        return view('manage_categories');
+    }
+    public function product()
+    {
+        return view('product');
+    }
 }

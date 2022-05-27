@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html class="no-js" lang="">
    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
@@ -7,14 +6,14 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <title>Dashboard Page</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="assets/css/normalize.css">
-      <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-      <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-      <link rel="stylesheet" href="assets/css/themify-icons.css">
-      <link rel="stylesheet" href="assets/css/pe-icon-7-filled.css">
-      <link rel="stylesheet" href="assets/css/flag-icon.min.css">
-      <link rel="stylesheet" href="assets/css/cs-skin-elastic.css">
-      <link rel="stylesheet" href="assets/css/style.css">
+      <link rel="stylesheet" href="{{ asset('assets/css/normalize.css')}}">
+      <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css')}}">
+      <link rel="stylesheet" href="{{ asset('assets/css/font-awesome.min.css')}}">
+      <link rel="stylesheet" href="{{ asset('assets/css/themify-icons.css')}}">
+      <link rel="stylesheet" href="{{ asset('assets/css/pe-icon-7-filled.css')}}">
+      <link rel="stylesheet" href="{{ asset('assets/css/flag-icon.min.css')}}">
+      <link rel="stylesheet" href="{{ asset('assets/css/cs-skin-elastic.css')}}">
+      <link rel="stylesheet" href="{{ asset('assets/css/style.css')}}">
       <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
    </head>
    <body>
@@ -24,20 +23,20 @@
                <ul class="nav navbar-nav">
                   <li class="menu-title">Menu</li>
                   <li class="menu-item-has-children dropdown">
-                     <a href="{{url('/categories')}}" >Category Master</a>
+                     <a href="categories.php" >Category Master</a>
                   </li>
                   <li class="menu-item-has-children dropdown">
-                     <a href="{{url('/products')}}" > Product Master</a>
+                     <a href="product.php" > Product Master</a>
                   </li>
 				  <li class="menu-item-has-children dropdown">
-                     <a href="{{url('/categories')}}" > Order Master</a>
+                     <a href="order.php" > Order Master</a>
                   </li>
 
 				  <li class="menu-item-has-children dropdown">
-                     <a href="{{url('/categories')}}" > User Master</a>
+                     <a href="users.php" > User Master</a>
                   </li>
 				  <li class="menu-item-has-children dropdown">
-                     <a href="{{url('/categories')}}" > Contact Us</a>
+                     <a href="contact_us.php" > Contact Us</a>
                   </li>
 
                </ul>
@@ -58,25 +57,61 @@
                   <div class="user-area dropdown float-right">
                      <a href="#" class="dropdown-toggle active" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Welcome Admin</a>
                      <div class="user-menu dropdown-menu">
-                        <a class="nav-link" href="{{ route('logout') }}"><i class="fa fa-power-off"></i>logout</a>
+                        <a class="nav-link" href="logout.php"><i class="fa fa-power-off"></i>logout</a>
                      </div>
                   </div>
                </div>
             </div>
          </header>
+
+
+
+
+
 <div class="content pb-0">
 	<div class="orders">
 	   <div class="row">
 		  <div class="col-xl-12">
 			 <div class="card">
 				<div class="card-body">
-				   <h4 class="box-title">Dashboard </h4>
+				   <h4 class="box-title">Categories </h4>
+				   <h4 class="box-link"><a href="{{url('/manage_categories')}}">Add Categories</a> </h4>
 				</div>
-			</div>
+				<div class="card-body--">
+				   <div class="table-stats order-table ov-h">
+					  <table class="table ">
+						 <thead>
+							<tr>
+							   <th class="serial">#</th>
+							   <th>ID</th>
+							   <th>Categories</th>
+							   <th></th>
+							</tr>
+						 </thead>
+						 <tbody>
+							
+							<tr>
+							   <td class="serial"></td>
+							   <td></td>
+							   <td></td>
+							   <td>
+								
+							   </td>
+							</tr>
+							
+						 </tbody>
+					  </table>
+				   </div>
+				</div>
+			 </div>
 		  </div>
 	   </div>
 	</div>
 </div>
+
+
+
+
 
 <div class="clearfix"></div>
          <footer class="site-footer">
@@ -96,4 +131,3 @@
       <script src="assets/js/main.js" type="text/javascript"></script>
    </body>
 </html>
-

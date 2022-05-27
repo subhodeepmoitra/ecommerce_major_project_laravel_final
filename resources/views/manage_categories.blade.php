@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html class="no-js" lang="">
    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
@@ -64,21 +63,37 @@
                </div>
             </div>
          </header>
-<div class="content pb-0">
-	<div class="orders">
-	   <div class="row">
-		  <div class="col-xl-12">
-			 <div class="card">
-				<div class="card-body">
-				   <h4 class="box-title">Dashboard </h4>
-				</div>
-			</div>
-		  </div>
-	   </div>
-	</div>
-</div>
 
-<div class="clearfix"></div>
+
+
+
+<div class="content pb-0">
+            <div class="animated fadeIn">
+               <div class="row">
+                  <div class="col-lg-12">
+                     <div class="card">
+                        <div class="card-header"><strong>Categories</strong><small> Form</small></div>
+                        <form method="post">
+							<div class="card-body card-block">
+							   <div class="form-group">
+									<label for="categories" class=" form-control-label">Categories</label>
+									<input type="text" name="categories" placeholder="Enter categories name" class="form-control" required value="">
+								</div>
+							   <button id="payment-button" name="submit" type="submit" class="btn btn-lg btn-info btn-block">
+							   <span id="payment-button-amount">Submit</span>
+							   </button>
+							   <div class="field_error"></div>
+							</div>
+						</form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+
+
+		 <div class="clearfix"></div>
          <footer class="site-footer">
             <div class="footer-inner bg-white">
                <div class="row">
@@ -96,4 +111,5 @@
       <script src="assets/js/main.js" type="text/javascript"></script>
    </body>
 </html>
+
 

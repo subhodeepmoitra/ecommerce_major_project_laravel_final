@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html class="no-js" lang="">
    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
@@ -24,20 +23,20 @@
                <ul class="nav navbar-nav">
                   <li class="menu-title">Menu</li>
                   <li class="menu-item-has-children dropdown">
-                     <a href="{{url('/categories')}}" >Category Master</a>
+                     <a href="categories.php" >Category Master</a>
                   </li>
                   <li class="menu-item-has-children dropdown">
-                     <a href="{{url('/products')}}" > Product Master</a>
+                     <a href="product.php" > Product Master</a>
                   </li>
 				  <li class="menu-item-has-children dropdown">
-                     <a href="{{url('/categories')}}" > Order Master</a>
+                     <a href="order.php" > Order Master</a>
                   </li>
 
 				  <li class="menu-item-has-children dropdown">
-                     <a href="{{url('/categories')}}" > User Master</a>
+                     <a href="users.php" > User Master</a>
                   </li>
 				  <li class="menu-item-has-children dropdown">
-                     <a href="{{url('/categories')}}" > Contact Us</a>
+                     <a href="contact_us.php" > Contact Us</a>
                   </li>
 
                </ul>
@@ -64,19 +63,53 @@
                </div>
             </div>
          </header>
+
+
+
+
 <div class="content pb-0">
 	<div class="orders">
 	   <div class="row">
 		  <div class="col-xl-12">
 			 <div class="card">
 				<div class="card-body">
-				   <h4 class="box-title">Dashboard </h4>
+				   <h4 class="box-title">Products </h4>
+				   <h4 class="box-link"><a href="manage_product.php">Add Product</a> </h4>
 				</div>
-			</div>
+				<div class="card-body--">
+				   <div class="table-stats order-table ov-h">
+					  <table class="table ">
+						 <thead>
+							<tr>
+							   <th class="serial">#</th>
+							   <th>ID</th>
+							   <th>Categories</th>
+							   <th>Name</th>
+							   <th>Image</th>
+							   <th>MRP</th>
+							   <th>Price</th>
+							   <th>Qty</th>
+							   <th></th>
+							</tr>
+						 </thead>
+						 <tbody>
+							
+							   </td>
+							</tr>
+							
+						 </tbody>
+					  </table>
+				   </div>
+				</div>
+			 </div>
 		  </div>
 	   </div>
 	</div>
 </div>
+
+
+
+
 
 <div class="clearfix"></div>
          <footer class="site-footer">
@@ -96,4 +129,3 @@
       <script src="assets/js/main.js" type="text/javascript"></script>
    </body>
 </html>
-

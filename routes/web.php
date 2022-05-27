@@ -21,17 +21,25 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/categories', [App\Http\Controllers\HomeController::class, 'categories'])->name('categories');
+Route::get('/manage_categories', [App\Http\Controllers\HomeController::class, 'manage_categories'])->name('manage_categories');
+Route::get('/products', [App\Http\Controllers\HomeController::class, 'product'])->name('products');
 
-Route::get('logout', function ()
+
+Route::group(['middleware' => ['prevent-back-history']],function(){
+    Auth::routes();
+    Route::get('logout', function ()
 {
-    Auth::logout();
-    session_unset();
+    $session_id = Session::getId();
+    session()->forget($session_id);
+    //Auth::logout();
+    //session_unset();
     return redirect(property_exists($this, 'redirectAfterLogout') ? $this->redirectAfterLogout : '/');
 
     //these attempts will not remove values from the session.....
 
     //session()->forget('db');
-    //\Session::flush();
-
-
+    //Session::flush();
 })->name('logout');
+
+});
