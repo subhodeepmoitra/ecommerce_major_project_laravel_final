@@ -95,7 +95,7 @@
 						 <tbody>
 							@foreach ($products as $product)
                          
-                     @endforeach
+                     
 							<tr>
 							   <td class="serial">{{$product->id}}</td>
 							   <td>{{$product->name}}</td>
@@ -108,7 +108,7 @@
 							
 							  
 							</tr>
-							
+							@endforeach
 						 </tbody>
 					  </table>
 				   </div>
