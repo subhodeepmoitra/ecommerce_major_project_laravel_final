@@ -37,4 +37,8 @@ class HomeController extends Controller
     {
         return view('product');
     }
+    public function manage_products()
+    {
+        return view('manage_products');
+    }
 }

@@ -47,8 +47,8 @@
          <header id="header" class="header">
             <div class="top-left">
                <div class="navbar-header">
-                  <a class="navbar-brand" href="index.php"><img src="pic/icon.png" alt="logo3"></a>
-                  <a class="navbar-brand hidden" href="index.php"><img src="pic/icon.png" alt="logo3"></a>
+                  <a class="navbar-brand" href="{{url('/')}}"><img src="pic/icon.png" alt="logo3"></a>
+                  <a class="navbar-brand hidden" href="{{url('/')}}"><img src="pic/icon.png" alt="logo3"></a>
                   <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
                </div>
             </div>

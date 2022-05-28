@@ -23,20 +23,20 @@
                <ul class="nav navbar-nav">
                   <li class="menu-title">Menu</li>
                   <li class="menu-item-has-children dropdown">
-                     <a href="categories.php" >Category Master</a>
+                     <a href="{{url('/categories')}}" >Category Master</a>
                   </li>
                   <li class="menu-item-has-children dropdown">
-                     <a href="product.php" > Product Master</a>
+                     <a href="{{url('/products')}}" > Product Master</a>
                   </li>
 				  <li class="menu-item-has-children dropdown">
-                     <a href="order.php" > Order Master</a>
+                     <a href="{{url('/categories')}}" > Order Master</a>
                   </li>
 
 				  <li class="menu-item-has-children dropdown">
-                     <a href="users.php" > User Master</a>
+                     <a href="{{url('/categories')}}" > User Master</a>
                   </li>
 				  <li class="menu-item-has-children dropdown">
-                     <a href="contact_us.php" > Contact Us</a>
+                     <a href="{{url('/categories')}}" > Contact Us</a>
                   </li>
 
                </ul>
@@ -47,8 +47,8 @@
          <header id="header" class="header">
             <div class="top-left">
                <div class="navbar-header">
-                  <a class="navbar-brand" href="index.php"><img src="pic/icon.png" alt="logo3"></a>
-                  <a class="navbar-brand hidden" href="index.php"><img src="pic/icon.png" alt="logo3"></a>
+                  <a class="navbar-brand" href="{{url('/')}}"><img src="pic/icon.png" alt="logo3"></a>
+                  <a class="navbar-brand hidden" href="{{url('/')}}"><img src="pic/icon.png" alt="logo3"></a>
                   <a id="menuToggle" class="menutoggle"><i class="fa fa-bars"></i></a>
                </div>
             </div>
@@ -74,7 +74,8 @@
 			 <div class="card">
 				<div class="card-body">
 				   <h4 class="box-title">Products </h4>
-				   <h4 class="box-link"><a href="manage_product.php">Add Product</a> </h4>
+				   <h4 class="box-link"><a href="
+                  {{url('manage_products')}}">Add Product</a> </h4>
 				</div>
 				<div class="card-body--">
 				   <div class="table-stats order-table ov-h">
