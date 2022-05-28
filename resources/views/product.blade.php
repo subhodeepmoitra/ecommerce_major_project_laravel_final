@@ -84,18 +84,29 @@
 							<tr>
 							   <th class="serial">#</th>
 							   <th>ID</th>
-							   <th>Categories</th>
 							   <th>Name</th>
-							   <th>Image</th>
 							   <th>MRP</th>
-							   <th>Price</th>
-							   <th>Qty</th>
+							   <th>PRICE</th>
+							   <th>QUANTITY</th>
+							   <th>IMAGE</th>
 							   <th></th>
 							</tr>
 						 </thead>
 						 <tbody>
+							@foreach ($products as $product)
+                         
+                     @endforeach
+							<tr>
+							   <td class="serial">{{$product->id}}</td>
+							   <td>{{$product->name}}</td>
+							   <td>{{$product->mrp}}</td>
+							   <td>{{$product->price}}</td>
+							   <td>{{$product->qty}}</td>
+							   <td><img src=""/></td>
+							   <td></td>
+							</tr>
 							
-							   </td>
+							  
 							</tr>
 							
 						 </tbody>

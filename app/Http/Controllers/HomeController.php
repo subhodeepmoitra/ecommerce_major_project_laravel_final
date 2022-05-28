@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use DB;
+
 use App\Models\Manage_Categories_Post;
 
 use App\Models\Manage_Products_Post;
@@ -46,7 +48,9 @@ class HomeController extends Controller
     }
     public function product()
     {
-        return view('product');
+       $products = DB::select ('SELECT * FROM manage__products__posts
+       ');
+       return view('product',['products'=>$products]);
     }
     public function manage_products()
     {
