@@ -74,7 +74,9 @@
                   <div class="col-lg-12">
                      <div class="card">
                         <div class="card-header"><strong>Product</strong><small> Form</small></div>
-                        <form method="post" enctype="multipart/form-data">
+                        <form name="add-products-post-form" id="add-products-post-form" method="post" action="{{url('store-products-form')}}" enctype="multipart/form-data">
+                           {{ csrf_field() }}
+                           {{ method_field('put') }}
 							<div class="card-body card-block">
 							   <div class="form-group">
 									<label for="categories" class=" form-control-label">Categories</label>
@@ -105,7 +107,7 @@
 								
 								<div class="form-group">
 									<label for="categories" class=" form-control-label">Image</label>
-									<input type="file" name="image" class="form-control">
+									<input type="file" name="img" class="form-control">
 								</div>
 								
 								<div class="form-group">

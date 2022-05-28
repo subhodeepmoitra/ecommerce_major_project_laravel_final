@@ -27,14 +27,20 @@ Route::get('/categories', [App\Http\Controllers\HomeController::class, 'categori
 
 Route::get('/manage_categories', [App\Http\Controllers\HomeController::class, 'manage_categories'])->name('manage_categories');
 
+Route::put('store-categories-form',[
+    HomeController::class,'storecategories'
+]);
+
 Route::get('/products', [App\Http\Controllers\HomeController::class, 'product'])->name('products');
 
 Route::get('/manage_products', [App\Http\Controllers\HomeController::class, 'manage_products'])->name('manage_products');
 
-
-Route::put('store-categories-form',[
-    HomeController::class,'storecategories'
+Route::put('store-products-form',[
+    HomeController::class,'storeproducts'
 ]);
+
+
+
 
 Route::group(['middleware' => ['prevent-back-history']],function(){
     Auth::routes();
