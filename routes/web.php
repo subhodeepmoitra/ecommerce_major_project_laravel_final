@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,11 +22,19 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 Route::get('/categories', [App\Http\Controllers\HomeController::class, 'categories'])->name('categories');
+
 Route::get('/manage_categories', [App\Http\Controllers\HomeController::class, 'manage_categories'])->name('manage_categories');
+
 Route::get('/products', [App\Http\Controllers\HomeController::class, 'product'])->name('products');
+
 Route::get('/manage_products', [App\Http\Controllers\HomeController::class, 'manage_products'])->name('manage_products');
 
+
+Route::put('store-categories-form',[
+    HomeController::class,'storecategories'
+]);
 
 Route::group(['middleware' => ['prevent-back-history']],function(){
     Auth::routes();

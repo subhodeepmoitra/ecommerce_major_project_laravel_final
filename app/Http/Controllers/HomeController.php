@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Models\Manage_Categories_Post;
+
 class HomeController extends Controller
 {
     /**
@@ -32,6 +34,13 @@ class HomeController extends Controller
     public function manage_categories()
     {
         return view('manage_categories');
+    }
+    public function storecategories(Request $request){
+        $Manage_Categories_Post = new Manage_Categories_post;
+        $Manage_Categories_Post->categories=$request->categories;
+        $Manage_Categories_Post->save();
+        return redirect('manage_categories')->with('status','Category Added');
+
     }
     public function product()
     {

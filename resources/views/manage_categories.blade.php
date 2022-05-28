@@ -73,7 +73,10 @@
                   <div class="col-lg-12">
                      <div class="card">
                         <div class="card-header"><strong>Categories</strong><small> Form</small></div>
-                        <form method="post">
+                        <form name="add-categories-post-form" id="add-categories-post-form" method="post" action="{{url('store-categories-form')}}">
+                           {{ csrf_field() }}
+                           {{ method_field('put') }}
+
 							<div class="card-body card-block">
 							   <div class="form-group">
 									<label for="categories" class=" form-control-label">Categories</label>
