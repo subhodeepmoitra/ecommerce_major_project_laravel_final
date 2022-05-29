@@ -62,16 +62,21 @@ class HomeController extends Controller
             'img' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
            ]);
     
-        //$img_name = $request->file('img')->getClientOriginalName();
-        //$img_path = $request->file('img')->store('public/product_image');
+           
+
         
         $Manage_Products_Post = new Manage_Products_post;
         $Manage_Products_Post->name = $request->name;
         $Manage_Products_Post->mrp = $request->mrp;
         $Manage_Products_Post->price = $request->price;
         $Manage_Products_Post->qty = $request->qty;
+
+
+
         $Manage_Products_Post->img_name = $request->file('img')->getClientOriginalName();
-        $Manage_Products_Post->img_path = $request->file('img')->store('public/images');
+        $Manage_Products_Post->img_path = $request->file('img')->store('images');
+
+        
         $Manage_Products_Post->short_desc = $request->short_desc;
         $Manage_Products_Post->description = $request->description;
         $Manage_Products_Post->meta_title = $request->meta_title;

@@ -15,7 +15,7 @@ class CreateManageProductsPostsTable extends Migration
     {
         Schema::create('manage__products__posts', function (Blueprint $table) {
             $table->id();
-            $table->string('prod_name');
+            $table->string('name');
             $table->string('mrp');
             $table->string('price');
             $table->string('qty');

@@ -82,7 +82,6 @@
 					  <table class="table ">
 						 <thead>
 							<tr>
-							   <th class="serial">#</th>
 							   <th>ID</th>
 							   <th>Name</th>
 							   <th>MRP</th>
@@ -102,7 +101,7 @@
 							   <td>{{$product->mrp}}</td>
 							   <td>{{$product->price}}</td>
 							   <td>{{$product->qty}}</td>
-							   <td><img src=""/></td>
+							   <td><img src="{{ asset('images/' . $product->img_path) }}"></td>
 							   <td></td>
 							</tr>
 							
