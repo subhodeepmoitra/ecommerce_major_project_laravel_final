@@ -95,8 +95,6 @@
 						 </thead>
 						 <tbody>
 							@foreach ($products as $product)
-                         
-                     
 							<tr>
 							   <td class="serial">{{$product->id}}</td>
 							   <td>{{$product->name}}</td>
@@ -104,10 +102,9 @@
 							   <td>{{$product->price}}</td>
 							   <td>{{$product->qty}}</td>
 							   <td><img src="{{ url('public/Image/'.$product->img_name) }}"  height="50px"></td>
+                        <td><span class='badge badge-delete'><a href='delete/{{$product->id}}'>Delete</a></span></td>
+                        <td><span class='badge badge-edit'><a href=''>Edit</a></span>&nbsp;</td>
 							   <td></td>
-							</tr>
-							
-							  
 							</tr>
 							@endforeach
 						 </tbody>

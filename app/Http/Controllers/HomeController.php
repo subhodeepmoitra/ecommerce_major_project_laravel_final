@@ -61,28 +61,19 @@ class HomeController extends Controller
         $validatedData = $request->validate([
             'img' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
            ]);
-    
-           
-
-        
         $Manage_Products_Post = new Manage_Products_post;
         $Manage_Products_Post->name = $request->name;
         $Manage_Products_Post->mrp = $request->mrp;
         $Manage_Products_Post->price = $request->price;
         $Manage_Products_Post->qty = $request->qty;
-
-
-
         //$Manage_Products_Post->img_name = $request->file('img')->getClientOriginalName();
         //$Manage_Products_Post->img_path = $request->file('img')->store('images');
-
         if($request->file('img')){
             $file= $request->file('img');
             $filename= date('YmdHi').$file->getClientOriginalName();
             $file-> move(public_path('public/Image'), $filename);
             $Manage_Products_Post['img_name']= $filename;
         }
-        
         $Manage_Products_Post->short_desc = $request->short_desc;
         $Manage_Products_Post->description = $request->description;
         $Manage_Products_Post->meta_title = $request->meta_title;
@@ -91,4 +82,10 @@ class HomeController extends Controller
         $Manage_Products_Post->save();
         return redirect('manage_products')->with('status','Product Added');
     }
+
+    public function productdestroy($id) {
+        DB::table('manage__products__posts')->where('id', '=', $id)->delete();
+        //DB::delete('delete from manage__products__posts where id = ?',[$id]);
+        return view('product');
+        }
 }

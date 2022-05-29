@@ -39,6 +39,9 @@ Route::put('store-products-form',[
     HomeController::class,'storeproducts'
 ]);
 
+//Route::get('delete/{id}','HomeController@productdestroy');
+
+Route::get('/delete/{id}', [App\Http\Controllers\HomeController::class, 'productdestroy'])->name('productdestroy');
 
 
 
