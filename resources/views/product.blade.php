@@ -88,6 +88,8 @@
 							   <th>PRICE</th>
 							   <th>QUANTITY</th>
 							   <th>IMAGE</th>
+                        <th>DELETE</th>
+                        <th>UPDATE</th>
 							   <th></th>
 							</tr>
 						 </thead>
@@ -101,7 +103,7 @@
 							   <td>{{$product->mrp}}</td>
 							   <td>{{$product->price}}</td>
 							   <td>{{$product->qty}}</td>
-							   <td><img src="{{ asset('images/' . $product->img_path) }}"></td>
+							   <td><img src="{{ url('public/Image/'.$product->img_name) }}"  height="50px"></td>
 							   <td></td>
 							</tr>
 							

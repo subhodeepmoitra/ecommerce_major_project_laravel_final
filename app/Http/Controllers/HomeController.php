@@ -73,9 +73,15 @@ class HomeController extends Controller
 
 
 
-        $Manage_Products_Post->img_name = $request->file('img')->getClientOriginalName();
-        $Manage_Products_Post->img_path = $request->file('img')->store('images');
+        //$Manage_Products_Post->img_name = $request->file('img')->getClientOriginalName();
+        //$Manage_Products_Post->img_path = $request->file('img')->store('images');
 
+        if($request->file('img')){
+            $file= $request->file('img');
+            $filename= date('YmdHi').$file->getClientOriginalName();
+            $file-> move(public_path('public/Image'), $filename);
+            $Manage_Products_Post['img_name']= $filename;
+        }
         
         $Manage_Products_Post->short_desc = $request->short_desc;
         $Manage_Products_Post->description = $request->description;
