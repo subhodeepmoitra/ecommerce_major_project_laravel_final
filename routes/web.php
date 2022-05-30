@@ -4,18 +4,37 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use App\Http\Controllers\HomeController;
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+use App\Http\Controllers\accountController;
+use App\Http\Controllers\productController;
+use App\Http\Controllers\UserController;
 
-Route::get('/', function () {
+
+///////////////////////////////////// USER PANEL RELAY ROUTES /////////////////////////////////////////////////////
+
+Route::get('/', [App\Http\Controllers\productController::class, 'products'])->name('products');
+
+Route::get('/account', function () {
+    return view('useraccount');
+});
+
+Route::post("/login",[UserController::class,'login']);
+Route::get('/login', function () {
+    return view('userlogin');
+});
+
+Route::post("/signup",[UserController::class,'signup']);
+Route::get('/signup', function () {
+    return view('usersignup');
+});
+
+Route::get('/about', function () {
+    return view('userabout');
+});
+
+
+/////////////////// admin ///////////////////////////
+
+Route::get('/admin', function () {
     return view('auth.login');
 });
 
@@ -62,3 +81,5 @@ Route::group(['middleware' => ['prevent-back-history']],function(){
 })->name('logout');
 
 });
+
+
