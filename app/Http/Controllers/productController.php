@@ -10,22 +10,10 @@ use App\Http\Controllers\Controller;
 
 class productController extends Controller
 {
-//     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
-
-// public function index()
-// {
-//     return view('index');
-// }
-// public function product()
-// {
-//     // $data=product::all();
-    // return view('index',['product'=>$data]);
-    // // return product::all();
-
 
     public function products() {
         $products = DB::select('select * from manage__products__posts');
-        return view('userhome',['products'=>$products]);
+        return view('userindex',['products'=>$products]);
      }
 // }
 }

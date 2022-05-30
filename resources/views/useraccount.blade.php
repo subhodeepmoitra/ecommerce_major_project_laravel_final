@@ -47,7 +47,7 @@
                 <div class="form-container">
         {{-- <button type='button' class='btn btn-warning text-white w-100'><a href="login" class="activee">Login</a></button>
         <button type='button' class='btn btn-warning text-white w-100' value='signup'><a href="signup" class="activee">Register</a></button> --}}
-            <a href="login"><input type="submit" value="Login"><br></a>
+            <a href="{{url('userlogin')}}"><input type="submit" value="Login"><br></a>
                 <p>Have an account?</p><br>
                 <a href="signup"><input type="submit" value="Register"></a>
                 <p>Have not an account?</p>

@@ -15,12 +15,12 @@ return new class extends Migration
     {
         Schema::create('signup', function (Blueprint $table) {
             $table->id();
-            $table->string('FullName');
-            $table->string('UserName')->unique();
-            $table->string('Number');
-            $table->string('Email');
+            $table->string('fname');
+            $table->string('uname')->unique();
+            $table->string('pnum');
+            $table->string('pnum');
             $table->string('Password')->unique();
-            $table->string('CPassword');
+            $table->string('conpass');
 
 
             $table->timestamps();

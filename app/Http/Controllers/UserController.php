@@ -3,32 +3,27 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
-use App\Models\User;
+use DB;
+use App\Models\signup;
 
 class UserController extends Controller
 {
     function login(Request $req)
     {
-        $user= User::where(['uname'=>$req->uname])->first();
-        if($user && Hash::check($req->Password,$user->Password))
-        {
-            return "UserName or Password is not matched";
-        }
-        else{
-            $req->session()->put('user',$user);
-            return view ('userhome');
-        }
+        $products = DB::select('select * from manage__products__posts');
+        return view('userindex',['products'=>$products]);
     }
     function signup(Request $req)
     {
-    $user=new user;
-    $user->fname=$req->fname;
-    $user->uname=$req->uname;
-    $user->pnum=$req->pnum;
-    $user->email=$req->email;
-    $user->Password=Hash::make($req->Password);
-    $user->conpass=Hash::make($req->conpass);
-    $user->save();
-    return view ('userhome');
+    $signup=new Signup;
+    $signup->fname=$req->fname;
+    $signup->uname=$req->uname;
+    $signup->pnum=$req->pnum;
+    $signup->email=$req->email;
+    $signup->Password=Hash::make($req->Password);
+    $signup->conpass=Hash::make($req->conpass);
+    $signup->save();
+    return redirect('userhome')->with('status','Category Added');
+    //return view ('userhome');
     }
 }

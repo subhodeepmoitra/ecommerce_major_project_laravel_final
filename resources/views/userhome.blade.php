@@ -27,10 +27,10 @@
 <div class="col-md-12">
     <div class="row">
 
-    @foreach ($products as $product)
+    @foreach($products as $product)
+
     <div class='card mb-5' style='width: 18rem;'>
     <div class='card-body'>
-    {{-- <td>{{ $product->id }}</td> --}}
     <img src="{{ url('public/image/'.$product->img_name) }}"class='card-img-top' alt='...'>
     <h5 class='card-title text-center text-dark'>{{ $product->name }}</h5>
     <h5 class='card-text text-center text-dark'>{{ $product->mrp }}</h5>
@@ -39,6 +39,7 @@
 
     </div>
     </div>
+
     @endforeach
 
 </div>

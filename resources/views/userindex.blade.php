@@ -2,7 +2,7 @@
 @section('content')
 <div class="carousel slide mt-5 mb-5" data-bs-ride="carousel" id="carousel-1">
     <div class="carousel-inner">
-        <div class="carousel-item active"><img class="w-100 d-block" src="{{URL('imagess/test.jpg')}}" alt="Slide Image"></div>
+        <div class="carousel-item active"><img class="w-100 d-block" src="{{URL('user/imagess/test.jpg')}}" alt="Slide Image"></div>
         <div class="carousel-item"><img class="w-100 d-block" src="{{URL('user/imagess/test2.jpg')}}" alt="Slide Image"></div>
         <div class="carousel-item"><img class="w-100 d-block" src="{{URL('user/imagess/test3.jpg')}}" alt="Slide Image"></div>
         <div class="carousel-item"><img class="w-100 d-block" src="{{URL('user/imagess/test4.jpg')}}" alt="Slide Image"></div>
@@ -88,7 +88,7 @@
                 <span>&#9733;</span>
                 <span>&#9734;</span>
             </div>
-            <img src="{{URL('imagess/user_1.jpg')}}" alt="product">
+            <img src="{{URL('user/imagess/user_1.jpg')}}" alt="product">
             <h3>Anwesha Chatterjee</h3>
         </div>
         <div class="col-3">
@@ -102,7 +102,7 @@
                 <span>&#9733;</span>
                 <span>&#9734;</span>
             </div>
-            <img src="{{URL('imagess/user_2.jpg')}}" alt="product">
+            <img src="{{URL('user/imagess/user_2.jpg')}}" alt="product">
             <h3>Deblina Banerjee</h3>
         </div>
         <div class="col-3">
@@ -116,7 +116,7 @@
                 <span>&#9733;</span>
                 <span>&#9734;</span>
             </div>
-            <img src="{{URL('imagess/user_3.jpg')}}" alt="product">
+            <img src="{{URL('user/imagess/user_3.jpg')}}" alt="product">
             <h3>Priti Debnath</h3>
         </div>
     </div>
@@ -127,19 +127,19 @@
 <div class="small-container">
     <div class="row">
         <div class="col-5">
-            <img src="{{URL('imagess/logo_godrej.png')}}" alt="logo">
+            <img src="{{URL('user/imagess/logo_godrej.png')}}" alt="logo">
         </div>
         <div class="col-5">
-            <img src="{{URL('imagess/pampers1.jpg')}}" alt="logo" width="90px" height="75px">
+            <img src="{{URL('user/imagess/pampers1.jpg')}}" alt="logo" width="90px" height="75px">
         </div>
         <div class="col-5">
-            <img src="{{URL('imagess/sp2.png')}}" alt="logo">
+            <img src="{{URL('user/imagess/sp2.png')}}" alt="logo">
         </div>
         <div class="col-5">
-            <img src="{{URL('imagess/huggies1.png')}}" alt="logo" width="85px" height="80px">
+            <img src="{{URL('user/imagess/huggies1.png')}}" alt="logo" width="85px" height="80px">
         </div>
         <div class="col-5">
-            <img src="{{URL('imagess/logo_paypal.png')}}" alt="logo">
+            <img src="{{URL('user/imagess/logo_paypal.png')}}" alt="logo">
         </div>
     </div>
 </div>

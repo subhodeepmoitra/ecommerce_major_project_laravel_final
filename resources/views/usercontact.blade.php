@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TINY TRESSERS--Contact Us</title>
-    <link rel="stylesheet" href="{{URL('css/style.css')}}">
+    <link rel="stylesheet" href="{{URL('user/css/style.css')}}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,600;1,700&display=swap" rel="stylesheet">
@@ -24,7 +24,7 @@
 <div class="container">
     <div class="navbar">
         <div class="logo">
-            <a href="/"><img src="{{URL('imagess/logo2.png')}}" alt="logo" width="125px"></a>
+            <a href="/"><img src="{{URL('user/imagess/logo2.png')}}" alt="logo" width="125px"></a>
         </div>
         <nav>
             <ul id="MenuItems">
@@ -35,8 +35,8 @@
                 <li><a href="contact" class="activee active">Contact</a></li>
             </ul>
         </nav>
-        <a href="cart"><img src="{{URL('imagess/cart.png')}}" alt="cart" width="30px" height="30px"></a>
-        <img src="{{URL('imagess/menu.png')}}" class="menu-icon"
+        <a href="cart"><img src="{{URL('user/imagess/cart.png')}}" alt="cart" width="30px" height="30px"></a>
+        <img src="{{URL('user/imagess/menu.png')}}" class="menu-icon"
         onclick ="menutoggle()">
     </div>
 </div>
@@ -79,12 +79,12 @@
                 <h3 class="sizeb">Download Our App</h3>
                 <p>Download App for Android ios mobile phone.</p>
                 <div class="app-logo">
-                    <img src="{{url('imagess/play_store.png')}}" alt="image">
-                    <img src="imagess/app_store.png" alt="image">
+                    <img src="{{url('user/imagess/play_store.png')}}" alt="image">
+                    <img src="user/imagess/app_store.png" alt="image">
                 </div>
             </div>
             <div class="footer-col-2">
-                <img src="{{url('imagess/logo3.png')}}" alt="logo">
+                <img src="{{url('user/imagess/logo3.png')}}" alt="logo">
                 <p>Our Purpose Is To Make The Pleasure and Benefits of Your Baby Accessible to the Many</p>
             </div>
             <div class="footer-col-3">

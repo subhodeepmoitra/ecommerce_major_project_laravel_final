@@ -1,15 +1,11 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Hash;
 use DB;
-
 use App\Models\Manage_Categories_Post;
-
 use App\Models\Manage_Products_Post;
-
+use App\Models\signup;
 class HomeController extends Controller
 {
     /**
@@ -27,36 +23,42 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function adminindex()
     {
         return view('dashboard2');
     }
-    public function categories()
+
+
+    public function admincategories()
     {
         return view('categories');
     }
-    public function manage_categories()
+
+
+    public function adminmanage_categories()
     {
         return view('manage_categories');
     }
-    public function storecategories(Request $request){
+
+
+    public function adminstorecategories(Request $request){
         $Manage_Categories_Post = new Manage_Categories_post;
         $Manage_Categories_Post->categories=$request->categories;
         $Manage_Categories_Post->save();
         return redirect('manage_categories')->with('status','Category Added');
 
     }
-    public function product()
+    public function adminproduct()
     {
        $products = DB::select ('SELECT * FROM manage__products__posts
        ');
        return view('product',['products'=>$products]);
     }
-    public function manage_products()
+    public function adminmanage_products()
     {
         return view('manage_products');
     }
-    public function storeproducts(Request $request)
+    public function adminstoreproducts(Request $request)
     {
         $validatedData = $request->validate([
             'img' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
@@ -83,9 +85,11 @@ class HomeController extends Controller
         return redirect('manage_products')->with('status','Product Added');
     }
 
-    public function productdestroy($id) {
+    public function adminproductdestroy($id) {
         DB::table('manage__products__posts')->where('id', '=', $id)->delete();
         //DB::delete('delete from manage__products__posts where id = ?',[$id]);
         return view('product');
         }
-}
+    }
+
+        

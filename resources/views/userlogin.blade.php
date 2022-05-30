@@ -24,7 +24,7 @@
 
     <div class="center-login">
         <h1>Login</h1>
-        <form method="POST" action="login" >
+        <form method="POST" action="userlogin" >
             @csrf
             <div class="txt_field">
                 <input type="text" required name="uname">
