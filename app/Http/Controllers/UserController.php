@@ -11,7 +11,7 @@ class UserController extends Controller
     function login(Request $req)
     {
         $products = DB::select('select * from manage__products__posts');
-        return view('userindex',['products'=>$products]);
+        return view('user.userindex',['products'=>$products]);
     }
     function signup(Request $req)
     {
@@ -23,7 +23,7 @@ class UserController extends Controller
     $signup->Password=Hash::make($req->Password);
     $signup->conpass=Hash::make($req->conpass);
     $signup->save();
-    return redirect('userhome')->with('status','Category Added');
+    return redirect('user.userhome')->with('status','Category Added');
     //return view ('userhome');
     }
 }

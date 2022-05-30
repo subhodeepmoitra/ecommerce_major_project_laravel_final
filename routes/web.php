@@ -5,14 +5,6 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserControllers;
-use App\Http\Controllers\accountController;
-use App\Http\Controllers\productController;
-use App\Http\Controllers\UserController;
-
-
-
-
-
 
 
 ///////////////////////////////////// USER PANEL RELAY ROUTES /////////////////////////////////////////////////////
@@ -20,24 +12,26 @@ use App\Http\Controllers\UserController;
 Route::get('/', [App\Http\Controllers\UserControllers::class, 'products'])->name('products');
 
 Route::get('/account', function () {
-    return view('useraccount');
+    return view('user\useraccount');
 });
 
-Route::post("/login",[UserControllers::class,'login']);
-Route::get('/login', function () {
-    return view('userlogin');
+Route::post("/userlogin",[UserControllers::class,'login']);
+Route::get('/userlogin', function () {
+    return view('user\userlogin');
 });
 
 Route::post("/signup",[UserControllers::class,'signup']);
 Route::get('/signup', function () {
-    return view('usersignup');
+    return view('user\usersignup');
 });
 
 Route::get('/about', function () {
-    return view('userabout');
+    return view('user\userabout');
 });
 
-
+Route::get('/userlogout', 
+[App\Http\Controllers\UserControllers::class, 'products'])->
+name('products');
 
 
 
@@ -75,7 +69,7 @@ Route::get('/products', [App\Http\Controllers\HomeController::class, 'adminprodu
 Route::get('/manage_products', [App\Http\Controllers\HomeController::class, 'adminmanage_products'])->name('manage_products');
 
 Route::put('store-products-form',[
-    HomeController::class,'storeproducts'
+    HomeController::class,'adminstoreproducts'
 ]);
 
 //Route::get('delete/{id}','HomeController@productdestroy');

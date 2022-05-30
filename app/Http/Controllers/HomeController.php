@@ -25,19 +25,19 @@ class HomeController extends Controller
      */
     public function adminindex()
     {
-        return view('dashboard2');
+        return view('admin\dashboard2');
     }
 
 
     public function admincategories()
     {
-        return view('categories');
+        return view('admin\categories');
     }
 
 
     public function adminmanage_categories()
     {
-        return view('manage_categories');
+        return view('admin\manage_categories');
     }
 
 
@@ -45,18 +45,18 @@ class HomeController extends Controller
         $Manage_Categories_Post = new Manage_Categories_post;
         $Manage_Categories_Post->categories=$request->categories;
         $Manage_Categories_Post->save();
-        return redirect('manage_categories')->with('status','Category Added');
+        return redirect('admin\manage_categories')->with('status','Category Added');
 
     }
     public function adminproduct()
     {
        $products = DB::select ('SELECT * FROM manage__products__posts
        ');
-       return view('product',['products'=>$products]);
+       return view('admin\product',['products'=>$products]);
     }
     public function adminmanage_products()
     {
-        return view('manage_products');
+        return view('admin\manage_products');
     }
     public function adminstoreproducts(Request $request)
     {
@@ -68,8 +68,6 @@ class HomeController extends Controller
         $Manage_Products_Post->mrp = $request->mrp;
         $Manage_Products_Post->price = $request->price;
         $Manage_Products_Post->qty = $request->qty;
-        //$Manage_Products_Post->img_name = $request->file('img')->getClientOriginalName();
-        //$Manage_Products_Post->img_path = $request->file('img')->store('images');
         if($request->file('img')){
             $file= $request->file('img');
             $filename= date('YmdHi').$file->getClientOriginalName();
@@ -88,7 +86,7 @@ class HomeController extends Controller
     public function adminproductdestroy($id) {
         DB::table('manage__products__posts')->where('id', '=', $id)->delete();
         //DB::delete('delete from manage__products__posts where id = ?',[$id]);
-        return view('product');
+        return view('admin\product');
         }
     }
 
