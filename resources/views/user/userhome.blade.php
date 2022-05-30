@@ -86,7 +86,7 @@
                 <!-- <li><a href="product.php" class="activee">Products</a></li> -->
                 <li><a href="/about" class="activee">About</a></li>
                 <li><a href="contact" class="activee">Contact</a></li>
-                <li><a href="{{url('userlogout')}}" class="activee">Logout</a></li>
+                <li><a href="{{url('/')}}" class="activee">Logout</a></li>
             </ul>
         </nav>
         <a href="{{URL('cart')}}" class="cart"><img src="{{URL('user/imagess/cart.png')}}" alt="cart" width="30px" height="30px"></a>
