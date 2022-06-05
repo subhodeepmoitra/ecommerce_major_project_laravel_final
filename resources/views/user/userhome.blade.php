@@ -147,7 +147,7 @@
     <h5 class='card-title text-center text-dark'>{{ $product->name }}</h5>
     <h5 class='card-text text-center text-dark'>{{ $product->mrp }}</h5>
     <h5 class='card-text text-center text-dark'>{{ $product->price }}</h5>
-    <button type='button' class='btn btn-warning text-white w-100' value='Buy Now'>Buy Now</button>
+    <a href="https://rzp.io/l/pgF2eUP" ><button type='button' class='btn btn-warning text-white w-100' value='Buy Now'>Buy Now</button></a>
 
     </div>
     </div>
